@@ -1,0 +1,262 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+ 
+body{
+    font-family: "Roboto", "Open Sans", sans-serif;
+} 
+nav {
+    background-color: #1E202C;
+}
+ 
+nav ul li {
+    margin-left: 15px;
+}
+nav .navbar-nav .nav-item a{
+    font-weight: 400;
+    font-size: 14px;
+   font-family:  Roboto, "Open Sans", sans-serif;
+    padding: 0px 20px !important;
+    border-radius: 100vh;
+    color: white !important;
+    border: 2px solid  transparent;
+}
+
+nav .navbar-toggler{
+    border: 2px solid transparent;
+    border-radius: 40px;
+    padding: 15px;
+    display: none;
+    outline: none;
+}
+nav .navbar-toggler:focus{
+        border: 2px solid #009ad8 !important;
+box-shadow: none;
+}
+
+nav .navbar-nav .nav-item a:hover , nav .navbar-toggler:hover{
+    border: 2px solid #009ad8;
+    color: #009ad8 !important;
+    
+}
+nav .navbar-nav .nav-item a.active{
+    transition: 0.3s border; 
+    border: 2px solid #009ad8;
+    color: #009ad8 !important;
+
+}
+
+.logo-content h1{
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 500;  
+      color: #fff;
+}
+
+.logo-content p{
+    margin-bottom: 0;
+    font-size: 11px;
+    color: #bfc1c8;
+}
+
+.navbar-nav li  {
+    margin-left: 10px; 
+}
+.weather{
+    background:url('../images/banner.png') , #1E202C;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+   
+}
+
+  .inputs{
+    margin: 70px 0px;
+
+    position: relative ;
+}
+.inputs  input:first-of-type{
+    background-color: #1E202C;
+    padding: 10px 30px;
+    width: 100%;
+    border: none;
+    color: #fff;
+   
+}
+.inputs  input:last-of-type{
+position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ right: 10px;
+ background-color: #009ad8;
+color: white;
+padding: 5px 25px;
+}
+/* ===================================== */
+#display-weather .card {
+   height:100%;
+   border: none;
+ 
+}
+.card-header p{
+    margin-bottom: 0;
+}
+ .card-header{
+ color: #BFC1C8;
+font-size: 16px;
+ padding:10px;
+
+}
+#weather-today .card-header {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+ 
+#weather-today .card-temp{
+    color: #fff;
+    font-size: 6rem;
+    font-weight: bold;
+    padding-block: 20px;
+}
+#weather-today .card-body img:not(ul img){
+    width: 90px;
+    margin-left: 10px;
+}
+.card .card-location{
+    color: #BFC1C8;
+}
+#weather-today .card-header , #weather-day-after-tomorrow .card-header{
+ background: #2D303D;
+}
+#weather-today .card-body , #weather-day-after-tomorrow .card-body{
+    background-color: #323544;
+}
+
+.card .card-text{
+    color: #009ad8;
+    padding-block: 10px;
+}
+.card .maximum-temperatures{
+    color: #fff;
+}
+ 
+#weather-tomorrow .card-header{
+    background-color:#222531;
+}
+.card .Minimum-temperatures , .card .weather-icons{
+    color: #BFC1C8;
+}
+ #weather-tomorrow .card-body{
+    background-color: #262936;
+}
+.card ul {
+    padding: 0;
+}
+.card ul li{
+    padding-right: 20px;
+}
+.card ul img{
+    width: 20px;
+}
+
+.card-body img{
+    width: 50px;
+}
+ 
+
+
+
+
+
+.spin{
+    left: 50%;
+    top: 50%;
+  
+}
+
+/* ================================================ */
+ .footer{
+    padding: 50px 0;
+   background-color:  #262936
+ }
+
+ .footer p {
+    
+    color: #bfc1c8;
+ }
+
+ .footer li  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1E202C;
+ }
+
+ .footer li i {
+    color: #009ad8;
+    transition: 0.4s;
+ }
+
+ .footer li:hover  {
+    background-color: #009ad8;
+ }
+
+ .footer li:hover i{
+    color: #fff !important ;
+ }
+
+ /* ============================ */
+ @media screen and (max-width: 990px){
+ main{
+    margin: auto 0 !important;
+ }
+ .navbar .navbar-toggler{
+    display: inline-block;
+ }
+
+ .navbar .navbar-collapse {  
+    margin-block: 50px;
+    background-color: #2D303D;
+    border-radius: 10px;
+ }
+ .navbar ul li{
+    text-align: center;
+    padding-block: 15px;
+    border-color:none
+ }
+ 
+ nav .navbar-nav .nav-item a.active ,
+ nav .navbar-nav .nav-item a:hover ,
+ nav .navbar-toggler:focus
+ , nav .navbar-toggler:hover{
+    border: 2px solid transparent;
+ }
+ .navbar ul li:not(li:last-child){
+    border-bottom: 1px solid #bfc1c82a;
+ }
+ 
+ .weather .col-md-4 , .col-md-6 , .col-md-5 {
+    width: 100% !important;
+ margin-inline: 0;
+ }
+ .contact-page .co{
+    margin-inline: auto !important;
+ }
+.footer .icons ul{
+    margin-top: 10px;
+    padding: 0;
+    margin-bottom: 0;
+}
+.footer p{
+    margin: 0 !important;
+}
+ .footer .col-md-8{
+    width: 100%;
+ }
+}

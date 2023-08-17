@@ -1,0 +1,66 @@
+.contact-page{
+    background-color: #1E202C;
+}
+.contact{
+ 
+    padding-block: 70px;
+}
+
+  .back-to-home{
+    background: #262936;
+    border-radius: 40px;
+    padding: 20px 30px;
+    font-size: 13px;
+    width: 100%;
+}
+.back-to-home .cont-text{
+    color: #fff;
+    padding-left: 10px;
+}
+.back-to-home a {
+    text-decoration: none;
+    color:#B0C1C8;
+}
+.contact img{
+    width: 15px;
+    margin-right: 10px;
+}
+.card-icon span{
+    margin-right: 20px;
+}
+#card-data .card-body{
+    padding: 20px;
+}
+#card-data .card-title{
+    margin-bottom: 20px;
+}
+#card-data { 
+    background-color: #262936;
+    color:#B0C1C8;
+ 
+    border-radius: 10px;
+}
+#card-form {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+}
+ #card-form form input , #card-form form textarea{
+    background-color: transparent;
+   
+    padding: 15px;
+    border:2px solid #b0c1c84f;
+}
+
+#card-form form input  {
+ 
+    border-radius: 100vh;
+}
+
+#card-form form textarea{
+    border-radius: 30px;
+}
+
+#card-form form input:hover , #card-form form textarea:hover{ 
+    border:2px solid #009ad8;
+}
