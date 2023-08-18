@@ -9,10 +9,12 @@ var displayWeather = document.getElementById('display-weather')
  })
 
 let currentMonth=''
+let monthNumber=0
 let currentDay=''
 let nextDay=''
 let dayaftertomorrow=''
 let current=''
+let forecastDate=[]
 let forecastday=[]
 let data ={}
 async function getApi(country) {
@@ -21,7 +23,8 @@ async function getApi(country) {
  data =await xml.json()
    current = data.current.last_updated
     forecastday= data.forecast.forecastday;
-  
+    forecastDate =forecastday.map((el)=>{return el.date })  
+    // console.log(forecastDate)
     displayData();
 }
 
@@ -39,7 +42,7 @@ function displayData(){
  <div class="card" id="weather-today">
 <div class="card-header">
 <p>${currentDay}</p>
-<p>${currentMonth}</p>
+<p>${monthNumber+currentMonth}</p>
 </div>
 
      <div class="card-body">
@@ -117,18 +120,21 @@ function displayData(){
  
  
 function getTimeFunc(){
-    const monthNames = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-    ];
-    
-    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const d = new Date(current);
-    currentMonth = d.getDate() + monthNames[d.getMonth()];
-    currentDay = days[d.getDay()]
-    nextDay = days[d.getDay()+1]
-    dayaftertomorrow = days[d.getDay()+2]
+let d =new Date(current)
+currentDay= d.toLocaleDateString('en-us',{weekday:"long"});
+ currentMonth = d.toLocaleString('en-us',{month:'long'})
+ monthNumber = d.getDate()
+ for(let i=0; i<2; i++){
+     let nd = new Date(forecastDate[i])
+ nextDay=nd.toLocaleDateString('en-us',{weekday:"long"});
+ let dat = new Date(forecastDate[i+1])
+ dayaftertomorrow=dat.toLocaleDateString('en-us',{weekday:"long"});
  
+
+ }
 }
+   
+ 
   function findCountry(country){
     getApi(country)
    
